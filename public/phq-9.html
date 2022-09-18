@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spravato Timer App</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!--<link rel="stylesheet" href="./style.css">-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="https://kit.fontawesome.com/e47385a911.js" crossorigin="anonymous"></script>
+    
+  </head>
+  <body>
+   <!--Navbar-->
+   <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="index.html">
+        <img src="/public/images/WellPower_Logo.jpg" width="112" height="28">
+      </a>
+  
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="index.html">
+          Home
+        </a>
+  
+        <a class="navbar-item" href="phq-9.html">
+          PHQ-9
+        </a>
+      </div>
+    </div>
+  </nav>
+  <!--Navbar End-->
+<!--        //////     //////     //////    //////     -->
+
+<section class="section is-medium pb-2 pt-2">
+    <div class="level">
+<div class="container">
+  <h1 class="title level-item">Patient Health Questionnaire (PHQ-9)</h1>
+  <h2>
+    <div class="hero level-item">
+    <div class="notification is-primary" id="phq-btn" data-target="phq-modal">
+        
+    </div>
+    </div>
+  </h2>
+</div>
+</div>
+</section>
+
+<section class="section is-large pt-2">
+<form id="phq-form">
+    <div class="columns is-grouped is-multiline">        
+        <div class="column is-12-mobile is-12-tablet is-12-desktop">
+            <div class="field">
+                <label class="label">
+                    Over the last two weeks, how often have you been bothered by any of the following problems?
+                </label>
+                <div class="control">
+                    <div class="select is-multiple">
+                        <select>
+                          <option value="0">Not at all</option>
+                          <option value="1">Several days</option>
+                          <option value="2">More than half of the days</option>
+                          <option value="3">Nearly every day</option>                          
+                        </select>
+                      </div>
+                  </div>    
+            </div>        
+        </div>
+        <div class="column is-12-mobile is-12-tablet is-12-desktop">
+            <div class="field">
+                <label class="label">
+                    Little interest or pleasure in doing things?
+                </label>
+                <div class="control">
+                    <div class="select is-multiple">
+                        <select>
+                            <option value="0">Not at all</option>
+                            <option value="1">Several days</option>
+                            <option value="2">More than half of the days</option>
+                            <option value="3">Nearly every day</option>                          
+                        </select>
+                      </div>
+                  </div>    
+            </div>        
+        </div>
+        <div class="column is-12-mobile is-12-tablet is-12-desktop">
+            <div class="field">
+                <label class="label">
+                    Feeling down, depressed, or hopeless?
+                </label>
+                <div class="control">
+                    <div class="select is-multiple">
+                        <select>
+                            <option value="0">Not at all</option>
+                            <option value="1">Several days</option>
+                            <option value="2">More than half of the days</option>
+                            <option value="3">Nearly every day</option>                          
+                        </select>
+                      </div>
+                  </div>    
+            </div>        
+        </div>
+        <div class="column is-12-mobile is-12-tablet is-12-desktop">
+            <div class="field">
+                <label class="label">
+                    Trouble falling or staying asleep, or sleeping too much?
+                </label>
+                <div class="control">
+                    <div class="select is-multiple">
+                        <select>
+                            <option value="0">Not at all</option>
+                            <option value="1">Several days</option>
+                            <option value="2">More than half of the days</option>
+                            <option value="3">Nearly every day</option>                          
+                        </select>
+                      </div>
+                  </div>    
+            </div>        
+        </div>
+        <div class="column is-12-mobile is-12-tablet is-12-desktop">
+            <div class="field">
+                <label class="label">
+                    Feeling tired or having little energy?
+                </label>
+                <div class="control">
+                    <div class="select is-multiple">
+                        <select>
+                            <option value="0">Not at all</option>
+                            <option value="1">Several days</option>
+                            <option value="2">More than half of the days</option>
+                            <option value="3">Nearly every day</option>                          
+                        </select>
+                      </div>
+                  </div>    
+            </div>        
+        </div>
+        <div class="column is-12-mobile is-12-tablet is-12-desktop">
+            <div class="field">
+                <label class="label">
+                    Poor appetite or overeating?
+                </label>
+                <div class="control">
+                    <div class="select is-multiple">
+                        <select>
+                            <option value="0">Not at all</option>
+                            <option value="1">Several days</option>
+                            <option value="2">More than half of the days</option>
+                            <option value="3">Nearly every day</option>                          
+                        </select>
+                      </div>
+                  </div>    
+            </div>        
+        </div>
+        <div class="column is-12-mobile is-12-tablet is-12-desktop">
+            <div class="field">
+                <label class="label">
+                    Feeling bad about yourself - or that you are a failure or have let yourself or your family down?
+                </label>
+                <div class="control">
+                    <div class="select is-multiple">
+                        <select>
+                            <option value="0">Not at all</option>
+                            <option value="1">Several days</option>
+                            <option value="2">More than half of the days</option>
+                            <option value="3">Nearly every day</option>                          
+                        </select>
+                      </div>
+                  </div>    
+            </div>        
+        </div>
+        <div class="column is-12-mobile is-12-tablet is-12-desktop">
+            <div class="field">
+                <label class="label">
+                    Trouble concentrating on things, such as reading the newspaper or watching television?
+                </label>
+                <div class="control">
+                    <div class="select is-multiple">
+                        <select>
+                            <option value="0">Not at all</option>
+                            <option value="1">Several days</option>
+                            <option value="2">More than half of the days</option>
+                            <option value="3">Nearly every day</option>                          
+                        </select>
+                      </div>
+                  </div>    
+            </div>        
+        </div>
+        <div class="column is-12-mobile is-12-tablet is-12-desktop">
+            <div class="field">
+                <label class="label">
+                    Moving or speaking so slowly that other people could have noticed?
+                    Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual?
+                </label>
+                <div class="control">
+                    <div class="select is-multiple">
+                        <select>
+                            <option value="0">Not at all</option>
+                            <option value="1">Several days</option>
+                            <option value="2">More than half of the days</option>
+                            <option value="3">Nearly every day</option>                          
+                        </select>
+                      </div>
+                  </div>    
+            </div>        
+        </div>
+        <div class="column is-12-mobile is-12-tablet is-12-desktop">
+            <div class="field">
+                <label class="label">
+                    Thoughts that you would be better off dead, or of hurting yourself in some way?
+                </label>
+                <div class="control">
+                    <div class="select is-multiple">
+                        <select>
+                            <option value="0">Not at all</option>
+                            <option value="1">Several days</option>
+                            <option value="2">More than half of the days</option>
+                            <option value="3">Nearly every day</option>                          
+                        </select>
+                      </div>
+                  </div>    
+            </div>        
+        </div>          
+        <div class="container level-item">        
+        <div class="button is-primary" id="phq-btn">
+          Submit
+        </div>  
+      </div>
+        <div class="column is-12-mobile is-12-tablet is-12-desktop">
+            <div class="box">            
+                Total = /27
+            </div>
+        </div>          
+
+    </div>
+</form>
+<footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        Depression Severity: 0-4 <strong>none</strong>, 5-9 mild, 10-14 <strong>moderate</strong>, 15-19 <strong>moderately severe</strong>, 20-27 <strong>severe</strong>.                            
+      </p>
+    </div>
+  </footer>      
+</section>
+
+<!--        //////     //////     //////    //////     -->
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"></script>
+  <!--<script type="module" src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"></script>-->
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js"></script>
+
+   <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+      //import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+      apiKey: "AIzaSyCjNUnJvIg-jackZLWhJepXwD-zr5q_nj0",
+      authDomain: "spravato-app.firebaseapp.com",
+      projectId: "spravato-app",
+      storageBucket: "spravato-app.appspot.com",
+      messagingSenderId: "752809078893",
+      appId: "1:752809078893:web:c97e57fac2bcedb9edcf64",
+      measurementId: "G-DHJZ4PFTTL"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+     // const analytics = getAnalytics(app);
+    </script>
+<script src="phq-9.js" type="text/javascript" language="javascript"></script>
+<script src="modal.js" type="text/javascript" language="javascript"></script>
+
+  </body>
+</html>
